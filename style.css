@@ -1,0 +1,39 @@
+body {
+	background-color: #ACCBD9;
+	font-family: sans-serif; 
+}
+header {
+	text-align: center;
+	margin-top: 60px;
+}
+select {
+	display: block;
+	margin-top: 10px;
+	background-color: #ACCBD9;
+}
+.form-container {
+	background-color: #85B5CA;
+	padding: 20px;
+	margin: 50px auto;
+	width: 600px;
+}
+
+.form-container hr {
+	border-color: #679CB3;
+	border-width: .5px;
+}
+
+.form-container h3 {
+	color: #445963;
+	font-weight: lighter;
+}
+
+.form-container input {
+	margin-top: 5px;
+	width: 100%;
+	margin-bottom: 10px;
+	height: 35px;
+	font-size: 20px;
+	background-color: #ACCBD9;
+	border:none;
+}
