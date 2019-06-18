@@ -85,6 +85,63 @@
 				</div>
 				<h3>Total Cost Will Be: $<span id="cost">0</span></h3>
 			</div>
+			<hr>
+			<div class="payment">
+				
+				<h3>Payment Info</h3>
+				<label>I am going to pay with: </label>
+				<select id="paymentSelector">
+					<option value="credit" selected>Credit Card</option>
+					<option value="paybal">Paypal</option>
+					<option value="bitcoin">Bitcoin</option>
+				</select>
+
+				<div id="credit-info">
+					<div id="card-number">
+						<label>Card Number</label>
+						<input type="text" name="card-number">
+					</div>
+					<div id="zip-code">
+						<label>Zip Code</label>
+						<input type="text" name="zip-code">
+					</div>
+					<div id="card-cvv">
+						<label>Card CVV</label>
+						<input type="text" name="card-cvv">
+					</div>
+					<div id="expiration-date">
+						<label>Expiration Date</label><br>
+						<select>
+							<option>1 - Jan</option>
+							<option>2 - Feb</option>
+							<option>3 - Mar</option>
+							<option>4 - Apr</option>
+							<option>5 - May</option>
+							<option>6 - June</option>
+							<option>7 - Jul</option>
+							<option>8 - Aug</option>
+							<option>9 - Sep</option>
+							<option>10 - Oct</option>
+							<option>11 - Nov</option>
+							<option>12 - Dec</option>
+						</select>
+						<select>
+							<option>2021</option>
+							<option>2020</option>
+							<option>2019</option>
+							<option>2018</option>
+							<option>2017</option>
+							<option>2016</option>
+							<option>2015</option>
+						</select>
+					</div>
+					
+				</div>
+
+				<p id="paymentMessage"></p>
+			</div>
+
+			<input type="submit" id="register" name="register" value="Register">
 		</form>
 
 	</div>

@@ -1,4 +1,4 @@
-window.addEventListener('load', ()=> {
+window.onload = ()=> {
 	
 
 	document.querySelector('.input input[type="text"]').focus();
@@ -47,18 +47,42 @@ window.addEventListener('load', ()=> {
 	let price = 0;
 	for(let i = 0; i < checkboxes.length; i++) {
 			checkboxes[i].addEventListener('click', function() {
-			price += parseInt(document.querySelector("#"+this.id +" + span").textContent);
-
-			let cost = document.querySelector('#cost');
-
+			if(checkboxes[i].checked == true) {
+				price += parseInt(document.querySelector("#"+this.id +" + span").textContent);
+				let cost = document.querySelector('#cost');
+			}else {
+				price -= parseInt(document.querySelector("#"+this.id +" + span").textContent);
+				let cost = document.querySelector('#cost');
+			}
 			cost.textContent = price;
 		});
-
 	}
 
 
 
-});
+	// let paymentForm = document.querySelector('.payment form');
+
+	let paymentSelector = document.querySelector('#paymentSelector');
+	
+	paymentSelector.addEventListener('change', (event)=> {
+		let paymentMessage = document.querySelector('#paymentMessage');
+		let optionText = paymentSelector.options[paymentSelector.selectedIndex].textContent ;
+
+		if(optionText === 'Credit Card') {
+
+			document.querySelector('#credit-info').style.display = 'block';
+			paymentMessage.textContent = "";
+
+		}else if(optionText === 'Paypal') {
+			document.querySelector('#credit-info').style.display = 'none';
+			paymentMessage.textContent = "If you selected the PayPal option we'll take you to Paypal's site to set up your billing information, when you click “Register” below.";
+		}else {
+			document.querySelector('#credit-info').style.display = 'none';
+			paymentMessage.textContent = "If you selected the Bitcoin option we'll take you to the Coinbase site to set up your billing information. Due to the nature of exchanging Bitcoin, all Bitcoin transactions will be final.";
+		}
+
+	});
+};
 
 
 

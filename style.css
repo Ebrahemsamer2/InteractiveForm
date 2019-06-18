@@ -1,18 +1,21 @@
 body {
-	background-color: #ACCBD9;
-	font-family: sans-serif; 
+	background-color: #611e1e;
+	font-family: sans-serif ; 
 }
 header {
 	text-align: center;
 	margin-top: 60px;
+	color: #fff;
+	font-weight: lighter;
 }
 select {
 	display: block;
 	margin-top: 10px;
+	padding: 5px;
 	background-color: #ACCBD9;
 }
 .form-container {
-	background-color: #85B5CA;
+	background-color: #058a84;
 	padding: 20px;
 	margin: 50px auto;
 	width: 600px;
@@ -24,7 +27,7 @@ select {
 }
 
 .form-container h3 {
-	color: #445963;
+	color: #fff;
 	font-weight: lighter;
 }
 .form-container input:focus {
@@ -43,7 +46,11 @@ select {
 	padding: 2px 5px 2px 5px;
 	transition: .2s ease-in-out;
 }
-
+.form-container input[type='text']:focus,
+.form-container input[type='email']:focus {
+	background-color: #fff;
+	border-color: #fff;
+}
 
 /* T-Shirt info */
 
@@ -61,3 +68,46 @@ select {
 	font-family: 20px;
 }
 
+
+
+/* Payment Info */
+
+#credit-info {
+	margin-top: 15px;
+	display: none;
+}
+#credit-info div {
+	margin-left: 2px;
+	display: inline-block;
+}
+#credit-info div#card-number {
+	width: 250px;
+	margin-right: 10px;
+}
+
+#credit-info div#zip-code {
+	width: 150px;
+	margin-right: 20px;
+}
+#credit-info div#card-cvv {
+	width: 100px;
+}
+
+
+#expiration-date select {
+	display: inline-block;
+}
+
+/* Submit Button */
+
+#register {
+	padding: 8px 15px;
+	margin-top: 10px;
+	cursor: pointer;
+	border: none;
+	background-color: #12627b;
+	color: #fff;
+	font-weight: lighter;
+	border-radius: 3px;
+	font-size: 20px;
+}
