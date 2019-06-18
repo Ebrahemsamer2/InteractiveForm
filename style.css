@@ -27,13 +27,37 @@ select {
 	color: #445963;
 	font-weight: lighter;
 }
-
-.form-container input {
+.form-container input:focus {
+	background: #fff;
+}
+.form-container input[type='text'],
+.form-container input[type='email'] {
 	margin-top: 5px;
 	width: 100%;
 	margin-bottom: 10px;
 	height: 35px;
 	font-size: 20px;
 	background-color: #ACCBD9;
-	border:none;
+	border-color: #ACCBD9;
+	border: none;
+	padding: 2px 5px 2px 5px;
+	transition: .2s ease-in-out;
 }
+
+
+/* T-Shirt info */
+
+.t-shirt-info {
+	display: inline-block;
+	padding: 5px;
+}
+
+
+
+/* Activities */
+
+#checkbox {
+	margin-bottom: 15px;
+	font-family: 20px;
+}
+
